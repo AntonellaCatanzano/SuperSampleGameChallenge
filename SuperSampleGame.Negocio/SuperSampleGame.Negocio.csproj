@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="15.0" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.props" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProjectGuid>{8E9545C2-B10A-4B67-9AFB-CA6D734A6584}</ProjectGuid>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>SuperSampleGame.Negocio</RootNamespace>
+    <AssemblyName>SuperSampleGame.Negocio</AssemblyName>
+    <TargetFrameworkVersion>v4.8</TargetFrameworkVersion>
+    <FileAlignment>512</FileAlignment>
+    <Deterministic>true</Deterministic>
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\Debug\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\Release\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="AutoMapper, Version=10.0.0.0, Culture=neutral, PublicKeyToken=be96cd2c38ef1005, processorArchitecture=MSIL">
+      <HintPath>..\packages\AutoMapper.10.0.0\lib\net461\AutoMapper.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.dll</HintPath>
+    </Reference>
+    <Reference Include="EntityFramework.SqlServer, Version=6.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089, processorArchitecture=MSIL">
+      <HintPath>..\packages\EntityFramework.6.4.4\lib\net45\EntityFramework.SqlServer.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.AspNet.Identity.Core, Version=2.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.AspNet.Identity.Core.2.2.3\lib\net45\Microsoft.AspNet.Identity.Core.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.3.0.1\lib\net45\Microsoft.Owin.Security.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.Cookies, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.Cookies.3.0.1\lib\net45\Microsoft.Owin.Security.Cookies.dll</HintPath>
+    </Reference>
+    <Reference Include="Microsoft.Owin.Security.OAuth, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\packages\Microsoft.Owin.Security.OAuth.3.0.1\lib\net45\Microsoft.Owin.Security.OAuth.dll</HintPath>
+    </Reference>
+    <Reference Include="Newtonsoft.Json, Version=6.0.0.0, Culture=neutral, PublicKeyToken=30ad4fe6b2a6aeed, processorArchitecture=MSIL">
+      <HintPath>..\packages\Newtonsoft.Json.6.0.4\lib\net45\Newtonsoft.Json.dll</HintPath>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+    </Reference>
+    <Reference Include="System" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Net.Http" />
+    <Reference Include="System.Xml" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Data\SuperSampleGameContext.cs" />
+    <Compile Include="DTOs\LoginDTO.cs" />
+    <Compile Include="DTOs\CategoriaDTO.cs" />
+    <Compile Include="DTOs\DestrezaDTO.cs" />
+    <Compile Include="DTOs\EquipamientoDTO.cs" />
+    <Compile Include="DTOs\GuerreroDestrezaDTO.cs" />
+    <Compile Include="DTOs\GuerreroDTO.cs" />
+    <Compile Include="DTOs\JugadorDTO.cs" />
+    <Compile Include="DTOs\JugadorEquipamientoDTO.cs" />
+    <Compile Include="DTOs\MapperConfig.cs" />
+    <Compile Include="DTOs\NivelDTO.cs" />
+    <Compile Include="Models\Categoria.cs" />
+    <Compile Include="Models\Destreza.cs" />
+    <Compile Include="Models\Equipamiento.cs" />
+    <Compile Include="Models\Guerrero.cs" />
+    <Compile Include="Models\GuerreroDestreza.cs" />
+    <Compile Include="Models\Jugador.cs" />
+    <Compile Include="Models\JugadorEquipamiento.cs" />
+    <Compile Include="Models\Nivel.cs" />
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Repositories\ICategoriaRepository.cs" />
+    <Compile Include="Repositories\IGuerreroDestrezaRepository.cs" />
+    <Compile Include="Repositories\IDestrezaRepository.cs" />
+    <Compile Include="Repositories\IEquipamientoRepository.cs" />
+    <Compile Include="Repositories\IGenericRepository.cs" />
+    <Compile Include="Repositories\IJugadorEquipamientoRepository.cs" />
+    <Compile Include="Repositories\IJugadorRepository.cs" />
+    <Compile Include="Repositories\Implements\CategoriaRepository.cs" />
+    <Compile Include="Repositories\Implements\DestrezaRepository.cs" />
+    <Compile Include="Repositories\Implements\EquipamientoRepository.cs" />
+    <Compile Include="Repositories\Implements\GenericRepository.cs" />
+    <Compile Include="Repositories\IGuerreroRepository.cs" />
+    <Compile Include="Repositories\Implements\GuerreroDestrezaRepository.cs" />
+    <Compile Include="Repositories\Implements\GuerreroRepository.cs" />
+    <Compile Include="Repositories\Implements\JugadorEquipamientoRepository.cs" />
+    <Compile Include="Repositories\Implements\JugadorRepository.cs" />
+    <Compile Include="Repositories\Implements\NivelRepository.cs" />
+    <Compile Include="Repositories\INivelRepository.cs" />
+    <Compile Include="Services\ICategoriaService.cs" />
+    <Compile Include="Services\IEquipamientoService.cs" />
+    <Compile Include="Services\IGenericService.cs" />
+    <Compile Include="Services\IGuerreroDestrezaService.cs" />
+    <Compile Include="Services\IGuerreroService.cs" />
+    <Compile Include="Services\IJugadorEquipamientoService.cs" />
+    <Compile Include="Services\IJugadorService.cs" />
+    <Compile Include="Services\Implements\CategoriaService.cs" />
+    <Compile Include="Services\Implements\DestrezaService.cs" />
+    <Compile Include="Services\Implements\EquipamientoService.cs" />
+    <Compile Include="Services\Implements\GenericService.cs" />
+    <Compile Include="Services\Implements\GuerreroDestrezaService.cs" />
+    <Compile Include="Services\Implements\GuerreroService.cs" />
+    <Compile Include="Services\IDestrezaService.cs" />
+    <Compile Include="Services\Implements\JugadorEquipamientoService.cs" />
+    <Compile Include="Services\Implements\JugadorService.cs" />
+    <Compile Include="Services\Implements\NivelService.cs" />
+    <Compile Include="Services\INivelService.cs" />
+  </ItemGroup>
+  <ItemGroup />
+  <ItemGroup>
+    <None Include="App.config" />
+    <None Include="packages.config" />
+  </ItemGroup>
+  <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>Este proyecto hace referencia a los paquetes NuGet que faltan en este equipo. Use la restauración de paquetes NuGet para descargarlos. Para obtener más información, consulte http://go.microsoft.com/fwlink/?LinkID=322105. El archivo que falta es {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.props')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.props'))" />
+    <Error Condition="!Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" Text="$([System.String]::Format('$(ErrorText)', '..\packages\EntityFramework.6.4.4\build\EntityFramework.targets'))" />
+  </Target>
+  <Import Project="..\packages\EntityFramework.6.4.4\build\EntityFramework.targets" Condition="Exists('..\packages\EntityFramework.6.4.4\build\EntityFramework.targets')" />
+</Project>
